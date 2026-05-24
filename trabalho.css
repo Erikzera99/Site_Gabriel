@@ -1,0 +1,406 @@
+/* Import de fonte */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit !important;
+}
+
+.body {
+    background-color: #2f3030;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* ================= HEADER / MENU PRINCIPAL ================= */
+
+.menu-principal {
+    width: 100%;
+    height: 100px;
+    background: #4f83f5;
+    border: solid #000000 3px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    position: relative;
+    z-index: 10;
+}
+
+/* Ajustes da Imagem da Logo */
+.logo img {
+    height: 90px; 
+    width: auto;
+    margin-left: 30px;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Barra de pesquisa celular */
+.menu-checkbox {
+      display: none;
+}
+
+.menu-icone {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 20px;
+      margin-right: 20px;
+      cursor: pointer;
+}
+
+.menu-icone span {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background-color: #000000;
+      border-radius: 3px;
+}
+
+/* Lista de links da navegação */
+.links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-right: 35px;
+    display: flex;
+    align-items: center; 
+    gap: 40px;
+}
+
+/* Estilização padrão de todos os links */
+.links a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: all 0.2s;
+}
+
+.links a:hover {
+    color: #ffffff;
+}
+
+/* --- DESTAQUE DO BOTAO LOGIN --- */
+.links .botao-login {
+    margin-left: 60px; 
+}
+
+.links .botao-login a {
+    background-color: #2f3030; 
+    color: #ffffff;            
+    padding: 8px 20px;         
+    border-radius: 12px;       
+    border: 2px solid #000000;
+    font-size: 18px;
+}
+
+.links .botao-login a:hover {
+    background-color: #ffffff;
+    color: #2f3030;
+    border-color: #ffffff;
+}
+
+/* ================= SEÇÃO DE PROMOÇÕES ================= */
+
+.container-promocoes {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.titulo-secao {
+    color: #ffffff;
+    font-size: 38px;
+    margin-bottom: 30px;
+    border-left: 6px solid #4f83f5;
+    padding-left: 10px;
+    text-align: center; 
+    animation: pulsar 2s ease-in-out infinite;
+}
+
+@keyframes pulsar {
+    0% {
+transform: scale(1);
+        text-shadow: 0 0 0 rgba(79, 131, 245, 0);
+    }
+    50% {
+        transform: scale(1.03);
+        color: #ffffff;
+        text-shadow: 0 0 15px rgba(79, 131, 245, 0.7); 
+    }
+    100% {
+        transform: scale(1);
+        text-shadow: 0 0 0 rgba(79, 131, 245, 0); /* Sem sombra */
+    }
+}
+
+/* GRADE DE PRODUTOS*/
+.grid-produtos {
+    display: grid !important; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px !important;
+    align-items: start;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* O Card Individual */
+.card-produto {
+    background-color: #1e1e1e;
+    border: 2px solid #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; 
+}
+
+/* Efeito de hover (passar o mouse) no card */
+.card-produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(79, 131, 245, 0.3);
+}
+
+/* Etiqueta de Desconto */
+.badge-desconto {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #ff3333;
+    color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 6px;
+    z-index: 2;
+}
+
+/* Área da Imagem */
+.produto-imagem {
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 270px;
+    box-sizing: border-box;
+}
+
+.produto-imagem img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Informações do Produto */
+.produto-info {
+    padding: 20px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.produto-titulo {
+    font-size: 20px;
+    margin: 0 0 15px 0;
+    font-weight: normal;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;        
+    text-overflow: ellipsis; 
+}
+
+/* Preços */
+.preco-antigo {
+    color: #888888;
+    text-decoration: line-through;
+    margin: 0;
+    font-size: 14px;
+}
+
+.preco-novo {
+    color: #4f83f5;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5px 0 0 0;
+}
+
+.preco-metodo {
+    color: #aaaaaa;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+}
+
+/* Botão de Comprar */
+.btn-comprar {
+    background-color: #4f83f5;
+    color: #000000;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: auto;
+}
+
+.btn-comprar:hover {
+    background-color: #ffffff;
+    color: #4f83f5;
+}
+
+.btn-carrinho {
+    text-decoration: none;
+    color: inherit;        
+    display: block;        
+    width: 100%;
+    height: 100%;
+}
+
+/*FOOTER*/
+
+/*Estilo geral rodape*/
+.rodape {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 60px 20px 30px 20px;
+    font-family:Arial, sans-serif;
+}
+
+/* Container para distribuir o conteudo*/
+.rodape-conteudo {
+    display:flex ;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+/* bloco de informação*/
+.rodape-secao {
+    flex: 1;
+    min-width: 250px;
+}
+
+.rodape-secao h3 {
+    border-bottom: 4px solid #4f83f5;
+    padding-bottom: 10px;
+    margin-bottom: 22px;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.rodape-secao ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rodape-secao ul li {
+    margin-bottom: 10px;
+    color: #ccc;
+    font-size: 1.2rem;
+}
+
+/*links*/
+.rodape-secao a {
+    color: #ccc ;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.rodape-secao a:hover {
+    color: #4f83f5;
+    padding-left: 5px;
+}
+
+/*Barra Direitos autorais*/
+.rodape-direitos {
+    text-align: center;
+    border-top: 1px solid #ffffff;
+    margin-top: 30px;
+    padding-top: 20px;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+/* ================= REGRA DE RESPONSIVIDADE (MEDIA QUERY) MAIN ================= */
+
+@media (max-width: 768px) {
+    
+    /* Mostra o ícone de 3 barrinhas */
+    .menu-icone {
+        display: flex;
+    }
+
+    /* Transforma a lista de links em um menu vertical suspenso */
+    .links {
+        display: none; 
+        position: absolute;
+        top: 94px; 
+        left: 0;
+        width: 100%;
+        background-color: #4f83f5;
+        border: solid #000000 3px;
+        border-radius: 0 0 20px 20px;
+        padding: 20px 0;
+        box-sizing: border-box;
+        z-index: 99;
+    }
+
+    /* Alinha os links um embaixo do outro no celular */
+    .links ul {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        gap: 20px;
+    }
+
+    .links .botao-login {
+        margin-left: 0; 
+    }
+
+    /*Quando o checkbox for marcado, exibe o menu (.links) */
+    .menu-checkbox:checked ~ .links {
+        display: block;
+    }
+}
+
+/* REGRAS RESPONIVIDADE (FOOTER)    */
+@media (max-width: 600px) {
+  .rodape-conteudo {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .rodape-secao h3 {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="carrinhoo.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./imagens/Prime.ico">
+      <title>PrimeChip - Carrinho </title>
+</head>
+<body>
+
+    <!-- Painel de Resumo do Carrinho -->
+<div class="cart-summary">
+        <a href="Trabalho.html" class="btn-back-site">Voltar</a>
+        <div class="summary-item">Selecionados: <span id="total-items">0</span></div>
+        <div class="summary-item">Total:<span id="total-original">R$ 0,00</span></div>
+        <div class="summary-item"><strong class="txt-desconto">Desconto (15% à vista): </strong><span id="total-discount" class="discount-value">R$ 0,00</span></div>
+        <div class="summary-item">Total à Vista: <span id="total-cash">R$ 0,00</span></div>
+        <button id="btn-finalizar-compra" class="btn-buy-site">Comprar</button>
+    </div>
+
+    <h1>Selecione seus Produtos</h1>
+
+    <div class="grid-container">
+        
+        <div class="card" data-price="1499.00">
+            <div class="card-image">
+                <img src="./imagens/processador.png" alt="Foto do Produto 01" class="img-produto">
+
+                <span class="card-price">R$ 1.499,90</span>
+            </div>
+            <div class="card-content">
+                <h2 class="card-title">Processador Intel I5-13400F</h2>
+                <p class="card-description">Clique no card para saber mais do produto!</p>
+                <button class="btn-info">Mais Informações</button>
+            </div>
+        </div>
+
+        <div class="card" data-price="3299.00">
+            <div class="card-image">
+             <img src="imagens/placa 4060ti.jpg" alt="Foto do Produto 2" class="img-produto">
+
+                <span class="card-price">R$ 3.299,90</span>
+            </div>
+            <div class="card-content">
+                <h2 class="card-title">Placa de Vídeo RTX 4060 TI</h2>
+                <p class="card-description">Clique no card para saber mais do produto!</p>
+                <button class="btn-info">Mais Informações</button>
+            </div>
+        </div>
+
+        <div class="card" data-price="980.00">
+            <div class="card-image">
+            <img src="imagens/memoria ran.jpg" alt="Foto do Produto 3" class="img-produto">
+
+                <span class="card-price">R$ 980,00</span>
+            </div>
+            <div class="card-content">
+                <h2 class="card-title">Memória RAM DDR4 FURY 16GB 3200MHz</h2>
+                <p class="card-description">Clique no card para saber mais do produto!</p>
+                <button class="btn-info">Mais Informações</button>
+            </div>
+        </div>
+
+        <div class="card" data-price="950.00">
+            <div class="card-image">
+               <img src="imagens/memoria kingston.jpg" alt="Foto do Produto 4" class="img-produto">
+
+                <span class="card-price">R$950,00</span>
+            </div>
+            <div class="card-content">
+                <h2 class="card-title">SSD Kingston NV2 1TB NVMe M.2</h2>
+                <p class="card-description">Clique no card para saber mais do produto!</p>
+                <button class="btn-info">Mais Informações</button>
+            </div>
+        </div>
+
+        <div class="card" data-price=" 400.00">
+            <div class="card-image">
+               <img src="imagens/Fonte.png" alt="Foto do Produto 5" class="img-produto">
+
+                <span class="card-price">R$ 400,00</span>
+            </div>
+            <div class="card-content">
+                <h2 class="card-title">Fonte Corsair CV550 550W 80 Plus Bronze</h2>
+                <p class="card-description">Clique no card para saber mais do produto!</p>
+                <button class="btn-info">Mais Informações</button>
+            </div>
+        </div>
+
+        <div class="card" data-price=" 684.00">
+            <div class="card-image">
+               <img src="imagens/Water cooler.png" alt="Foto do Produto 6" class="img-produto">
+
+                <span class="card-price">R$ 684,00</span>
+            </div>
+            <div class="card-content">
+                <h2 class="card-title">Water Cooler MasterLiquid 240mm</h2>
+                <p class="card-description">Clique no card para saber mais do produto!</p>
+                <button class="btn-info">Mais Informações</button>
+            </div>
+        </div>
+
+        <div class="card" data-price="399.00">
+            <div class="card-image">
+                <img src="imagens/Gabinete.PNG" alt="Foto do Produto 7" class="img-produto">
+                
+                <span class="card-price">R$ 399,00</span>
+            </div>
+            <div class="card-content">
+                <h2 class="card-title">Gabinete Gamer ATX Vidro Temperado</h2>
+                <p class="card-description">Clique no card para saber mais do produto!</p>
+                <button class="btn-info">Mais Informações</button>
+            </div>
+        </div>
+
+        <div class="card" data-price="793.40">
+            <div class="card-image">
+                <img src="imagens/Placa Mae.png" alt="Foto do Produto 8" class="img-produto">
+
+                <span class="card-price">R$ 793,40</span>
+            </div>
+            <div class="card-content">
+                <h2 class="card-title">Placa Mãe ASUS TUF Gaming B550M-Plus</h2>
+                <p class="card-description">Clique no card para saber mais do produto!</p>
+                <button class="btn-info">Mais Informações</button>
+            </div>
+        </div>
+
+        <div class="card" data-price="1208.00">
+            <div class="card-image">
+                <img src="imagens/Amd ryzen.png" alt="Foto do Produto 9" class="img-produto">
+
+                <span class="card-price">R$ 1.208,00</span>
+            </div>
+            <div class="card-content">
+                <h2 class="card-title">Processador AMD Ryzen 7 5700X</h2>
+                <p class="card-description">Clique no card para saber mais do produto!</p>
+                <button class="btn-info">Mais Informações</button>
+            </div>
+        </div>
+
+        <div class="card" data-price="6941.00">
+            <div class="card-image">
+               <img src="imagens/Pc gamer 10.png" alt="Foto do Produto 10" class="img-produto">
+
+                <span class="card-price">R$ 6.941,13</span>
+            </div>
+            <div class="card-content">
+                <h2 class="card-title">PC Gamer, AMD Ryzen 7 5700X, GeForce RTX 5060 8GB, 16GB DDR4, SSD M.2 1TB</h2>
+                <p class="card-description">Clique no card para saber mais do produto!</p>
+                <button class="btn-info">Mais Informações</button>
+            </div>
+        </div>
+
+        <div class="card" data-price="4137.92">
+            <div class="card-image">
+                <img src="imagens/Pc gamer 11.png" alt="Foto do Produto 11" class="img-produto">
+
+                <span class="card-price">R$ 4.137,92</span>
+            </div>
+            <div class="card-content">
+                <h2 class="card-title">PC Gamer, Intel i5-14400, UHD Intel 730, 16GB DDR4, SSD 480GB</h2>
+                <p class="card-description">Clique no card para saber mais do produto!</p>
+                <button class="btn-info">Mais Informações</button>
+            </div>
+        </div>
+
+        <div class="card" data-price="4704,43">
+            <div class="card-image">
+                <img src="imagens/pc Home.png" alt="Foto do Produto 12" class="img-produto">
+
+                <span class="card-price">R$ 4.704,43</span>
+            </div>
+            <div class="card-content">
+                <h2 class="card-title">PC Home Pichau HM085, AMD Ryzen 5 9600X, 16GB DDR5, SSD 480GB</h2>
+                <p class="card-description">Clique no card para saber mais do produto!</p>
+                <button class="btn-info">Mais Informações</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vinculando o arquivo JavaScript externo -->
+    <script src="carinhoo.js"></script>
+</body>
+</html>
